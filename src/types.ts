@@ -56,7 +56,7 @@ export interface DeleteResult<DataType=any> extends BaseRequestResult {
     
 }
 
-export interface DataProvider  {
+export interface RestQueryClient  {
     get: <DataType = any> (endpoint: string, params:GetParams) => Promise<GetResult<DataType>>;
     post: <DataType = any> (endpoint: string, params:PostParams) => Promise<PostResult<DataType>>;
     put: <DataType = any> (endpoint: string, params:PutParams) => Promise<PutResult<DataType>>;
